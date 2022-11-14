@@ -1,0 +1,81 @@
+.v-scaff__page{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: var(--found-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    &-loader{
+        position: absolute;
+        top: calc(50px + 1rem);
+        bottom: 36px;
+        left:0;
+        width: 100%;
+        padding-left: calc(250px + (3rem));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9fbfb;
+        z-index: 99;
+        &__inner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .indy{
+                content: " ";
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border-width: 2px;
+                border-style: solid;
+                border-color: #b00000 transparent #b00000 transparent;
+                animation: loading-ring 1.2s linear infinite;
+                left: 5px;
+                filter: none;
+                background: none;
+                top: 5px;
+            }
+            .message{
+                margin-top: 16px;
+            }
+        }
+    }
+    &-actions{
+        display: flex;
+        margin-bottom: 1rem;
+        justify-content: flex-end;
+        border-bottom: 1px solid rgba($grey-light, 0.5);
+        .v-scaff__action-btn{
+            border: none;
+            background: transparent;
+            color: $grey-light;
+            cursor: pointer;
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            margin-bottom: -1px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            &:hover{
+                border-bottom-color: $primary;
+                color: $primary;
+            }
+        }
+    }
+}
+
+@keyframes loading-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

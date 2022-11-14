@@ -1,0 +1,124 @@
+.v-scaff__main{
+    height: 100vh;
+    width: 100%;
+    //position: fixed;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    &-content{
+
+    }
+    &-header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9;
+        height: 50px;
+        background-color: #FFFFFF;
+        padding: 0.5rem;
+
+        &-inner{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding-right: var(--found-gutter-x, 0.75rem);
+            padding-left: var(--found-gutter-x, 0.75rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &-left{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+        &-nav{
+            color: $grey-light;
+            transition: color ease-in-out 0.3s;
+            fill: $grey-light;
+        }
+        &-title{
+            padding: 0 0.75rem;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            color: $grey-light;
+
+        }
+    }
+    &-footer{
+        position: fixed;
+        bottom: 0;
+        padding: 0.5rem;
+        height: 36px;
+        background-color: #000;
+        color: #5b677a;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        z-index: 9;
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &.float{
+        .v-scaff__main{
+            &-header{
+                padding-top: calc(1rem + 0.5rem);
+                height: calc(50px + 1rem);
+                transition: padding-left ease-in-out 0.3s;
+                box-shadow: 0 0 2rem 0 rgb(136 152 170 / 15%);
+            }
+            &-content{
+                padding-top: calc(50px + 1rem);
+                padding-bottom: 36px;
+                transition: padding-left ease-in-out 0.3s, background-color ease-in-out 0.6s;
+                min-height: 100vh;
+            }
+            &-footer{
+                width: 100%;
+                transition: padding-left ease-in-out 0.3s;
+            }
+        }
+    }
+    &.collapse{
+        .v-scaff__main{
+            &-header{
+
+            }
+            &-content{
+                padding-left: calc(250px + (3rem));
+            }
+            &-footer{
+                padding-left: calc(250px + (3rem))
+            }
+        }
+    }
+    &.full{
+        .v-scaff__main{
+            &-header{
+                padding-left: calc(50px + (3rem));
+            }
+            &-content{
+                padding-left: calc(50px + (3rem))
+            }
+            &-footer{
+                padding-left: calc(50px + (3rem))
+            }
+        }
+    }
+    &.collapse.float{
+        .v-scaff__main{
+            &-header{
+                width: 100%;
+                padding-left: calc(250px + (3rem));
+            }
+            &-content{
+
+            }
+
+        }
+    }
+}

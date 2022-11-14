@@ -1,0 +1,21 @@
+@import "v-scaff-variables";
+
+.v-scaff{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+@import "mixins";
+@import "components/v-scaff-animations";
+@import "components/v-scaff-header";
+@import "components/v-scaff-icon";
+@import "components/v-scaff-main";
+@import "components/v-scaff-sidebar";
+@import "components/v-scaff-page";
+@import "components/v-scaff-buttons";
+@import "components/v-scaff-modals";
+
+//vendors
+@import "vendors/vue-mesa/v-scaff-vue-mesa";

@@ -1,0 +1,97 @@
+$popup-modal-min: 500px;
+$popup-modal-max: 600px;
+$popup-modal-background-color: $white;
+$popup-modal-border-color: $grey-light;
+
+.v-scaff-modal {
+    &__container {
+        display: flex;
+        &.v-scaff__popup{
+            justify-content: center;
+            align-items: center;
+            .v-scaff-modal{
+                &__content{
+                    border: 1px solid $popup-modal-border-color;
+                    position: relative;
+                    margin: 0 1rem;
+                    border-radius: 0.25rem;
+                    max-width: $popup-modal-max;
+                    min-width: $popup-modal-min;
+                    color: #000;
+                }
+            }
+        }
+
+        &.v-scaff__slide{
+            .v-scaff-modal{
+                &__container{
+                    width: 100%;
+                    position: fixed;
+                }
+                &__content{
+                    position: absolute;
+                    right: 0;
+                    top:0;
+                    bottom: 0;
+                    border-left: 1px solid $popup-modal-border-color;
+                    border-top-left-radius: 1rem;
+                    border-bottom-left-radius: 1rem;
+                    width: var(--max-width);
+                }
+                &__inner-content{
+                    height: 100%;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        background: $popup-modal-background-color;
+        padding: 1rem;
+    }
+
+    &__header {
+        position: relative;
+        border-bottom: 2px solid rgba($grey-light, 0.7);
+        padding: 0.5rem 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 42px;
+
+        .v-scaff-modal {
+            &__title {
+                margin: 0 2rem 0 0;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $grey-light;
+            }
+        }
+
+    }
+
+    &__inner-content{
+        padding: 1rem 0;
+    }
+
+
+}
+
+.v-scaff-modal__slide-section{
+    width:100%;
+    border-bottom: 2px solid rgba(143, 143, 143, 0.7);
+    &-header{
+        margin: 0 2rem 0 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #8f8f8f;
+    }
+    &-content{
+
+    }
+}
