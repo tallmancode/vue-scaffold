@@ -1,74 +1,28 @@
 <template>
     <v-scaff-page>
-        <div class="row card-row">
-            <div class="col-4">
-                <v-scaff-form>
-                    <div class="input-example">
-                        <v-scaff-input
-                            name="text_input"
-                            label="Text Input"
-                            v-model="textInput.value"
-                            v-model:error="textInput.error"
-                            :helperText="'somehelper text'"
-                        ></v-scaff-input>
-                        <div class="input-buttons">
-                            <v-scaff-button
-                                btnClass="danger"
-                                @click="addError('textInput')"
-                                >Trigger Error</v-scaff-button
-                            >
-                            <v-scaff-button
-                                btnClass="info"
-                                @click="clearError('textInput')"
-                                >Clear Error</v-scaff-button
-                            >
-                        </div>
-                    </div>
-                </v-scaff-form>
-            </div>
-            <div class="col-4">
-                <div class="input-output">
-                    <label>Text Output Value</label>
-                    <div v-text="textInput.value"></div>
-                </div>
-            </div>
-            <div class="col-4">
-
-            </div>
-        </div>
+        <text-input-component></text-input-component>
     </v-scaff-page>
 </template>
 
 <script>
+import TextInputComponent from "./view-components/forms/TextInputComponent.vue";
+
 export default {
     name: "FormsView",
-    components: {},
-    data() {
-        return {
-            textInput: {
-                error: null,
-                value: null,
-            },
-        };
-    },
-    methods: {
-        addError(inputName) {
-            this[inputName].error = "This is a error message";
-        },
-        clearError(inputName) {
-            this[inputName].error = null;
-        },
-    },
+    components: {TextInputComponent},
+
 };
 </script>
 
-<style scoped lang="scss">
-.input-buttons {
+<style lang="scss" scoped>
+::v-deep(.input-buttons) {
     display: flex;
     justify-content: space-between;
 }
-.input-output {
+
+::v-deep(.input-output) {
     position: relative;
+
     label {
         top: -8px;
         position: absolute;
@@ -86,6 +40,7 @@ export default {
         font-size: 14px;
         transition: color 0.3s;
         z-index: 9;
+
         + div {
             box-sizing: border-box;
             width: 100%;
