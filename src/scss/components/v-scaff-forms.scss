@@ -76,6 +76,73 @@
             }
         }
     }
+
+    //switch styling
+    &.switch{
+        min-height: 1rem * 1.5;
+        margin-bottom: 1rem;
+        padding-left: 1em + .5em;
+        display: flex;
+        align-items: center;
+
+        .v-scaff__input-helper{
+            position: relative;
+            right: unset;
+            top: unset;
+            margin-left: 1rem;
+        }
+    }
+    .v-scaff__switch{
+        float: left;
+        width: 30px;
+        height: 17px;
+        margin-top: 0;
+        vertical-align: top;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 1px solid #757575;
+        appearance: none;
+        color-adjust: exact;
+        margin-left: 1.5em * -1;
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(0, 0, 0, .25)'/></svg>");
+        background-position: left center;
+        border-radius: 15px;
+        transition: background-position .15s ease-in-out;
+        &:active {
+            filter: brightness(90%);
+        }
+
+        &:focus {
+            border-color: #757575;
+            outline: 0;
+            box-shadow: none;
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(0, 0, 0, .25)'/></svg>");
+        }
+
+        &:checked {
+            background-color: #0091da;
+            border-color: #0091da;
+            background-position: right;
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(255, 255, 255, 1)'/></svg>");
+        }
+
+        &:disabled {
+            pointer-events: none;
+            filter: none;
+            opacity: .5;
+        }
+
+        &[disabled],
+        &:disabled {
+            ~ .form-check-label {
+                opacity: .5;
+            }
+        }
+    }
+    .v-scaff__switch-label{
+        margin-left: 1rem;
+    }
 }
 
 .v-scaff__input-helper{

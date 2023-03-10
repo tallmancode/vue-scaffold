@@ -4,7 +4,6 @@
             :id="uuid"
             v-model="inputValue"
             :name="name"
-            :type="type"
             class="v-scaff__input"
             rows="10"
         ></textarea>
@@ -32,13 +31,6 @@ export default {
         id: {
             type: [Number, String, Boolean],
             default: () => false,
-        },
-        type: {
-            type: String,
-            default: () => "text",
-            validator(value) {
-                return ["text", "password", "number"].includes(value);
-            },
         },
         label: {
             type: [String, Boolean],
