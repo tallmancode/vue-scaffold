@@ -1,0 +1,151 @@
+$primary: #0f9ee8;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+$grey-light: #8f8f8f;
+$white: #FFFFFF;
+$black: #000;
+$input-color:  #7d7d7d;
+
+$variable-prefix:             scaffold-;
+
+//Transitions
+$text-color-transition: color 0.3s ease-in-out;
+
+//element colours
+$body-bg: $white;
+$link-color: $primary;
+$link-hover-color: rgba($link-color, 0.5);
+
+// Typography
+$font-size-root: 13px;
+$font-family: Roboto, Arial, sans-serif;
+$font-size-base: 1rem;
+$font-weight-base: 400;
+$font-color: $dark;
+$line-height-base: 1.5;
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+//Links and Buttons
+$enable-link-decoration: false;
+$link-decoration: inherit;
+$link-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;;
+
+//containers and grid
+$enable-smooth-scroll: true;
+$enable-grid: true;
+
+$spacer: 1rem !default;
+
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+) !default;
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+$grid-gutter-width:           1.5rem !default;
+$enable-grid-classes:         true !default;
+$gutters: $spacers !default;
+$container-padding-x: $grid-gutter-width * .5;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+) !default;
+
+$btn-varients: (
+        primary : (
+                color: $white,
+                bg-color: $primary,
+                hover-color: $white,
+                hover-bg-color: rgba($primary, 0.6)
+        ),
+        secondary : (
+                color: $white,
+                bg-color: $secondary,
+                hover-color: $white,
+                hover-bg-color: rgba($secondary, 0.6)
+        ),
+        danger : (
+                color: $white,
+                bg-color: $danger,
+                hover-color: $white,
+                hover-bg-color: rgba($danger, 0.6)
+        ),
+        info : (
+                color: $white,
+                bg-color: $info,
+                hover-color: $white,
+                hover-bg-color: rgba($info, 0.6)
+        )
+)!default;
+
+//buttons
+$btn-default-bg-color: $primary !default;
+$btn-default-color: $white !default;
+$btn-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+$button-font: $font-family !default;
+$btn-font-weight: normal !default;
+$btn-font-size: 1rem !default;
+$btn-padding-x: .375rem !default;
+$btn-padding-y: .75rem !default;
+$btn-height: 45px !default;
+
+//Headings
+$headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        null !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              null !default;
+
+
+//sidebar
+$v-scaff-item-bg: transparent!default;
+$v-scaff-item-hover-bg: rgba(143, 143, 143, 0.1)!default;
+$v-scaff-nav-link-color: $primary!default;
+$v-scaff-nav-link-hover-color: rgba($primary, 0.5) !default;
+
+//header
+$header-height: 50px;
+$header-padding: 0.5rem;
+
+//sidebar
+$sidebar-expanded-width: 250px;
+$sidebar-collapsed-width: 50px;
+$float-spacing-x: 1.5rem;
+$float-spacing-y: 1rem;

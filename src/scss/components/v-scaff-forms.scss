@@ -1,0 +1,118 @@
+.v-scaff__form{
+}
+
+.v-scaff__form-group{
+    position: relative;
+    .v-scaff__label{
+        &:before, &:after{
+            position: absolute;
+            line-height: 1.25em;
+            display: inline-block;
+            margin: 0 calc(0.5em + 2px);
+            padding: 0 2px;
+            white-space: nowrap;
+            color: $input-color;
+            background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+            background-size: 100% 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+            font-size: 14px;
+            transition: color 0.3s;
+            z-index: 9;
+        }
+        &:before{
+            content: attr(data-label);
+            top: 4px;
+        }
+        &:after{
+            content: attr(data-error);
+            bottom: 4px;
+            transition: transform 0.3s;
+            transform: translateY(calc(100% + 6px));
+            visibility: hidden;
+        }
+    }
+    .v-scaff__input{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 1em 0 1em;
+        padding: 6px;
+        border: 1px solid #bababa;
+        border-radius: 3px;
+        background: #fff;
+        font-size: $font-size-base;
+        resize: none;
+        outline: none;
+        height: calc(3em + 2px);
+        transition: border-color 0.3s;
+    }
+    &:not(.error) .v-scaff__input:focus, .v-scaff__input:active {
+        transition-duration: 0.2s;
+        outline: none !important;
+        border-color: $primary;
+    }
+    &:not(.error) .v-scaff__input:focus + .v-scaff__label:before{
+       color: $primary;
+    }
+    &.error{
+        .v-scaff__input{
+            border-color: #f00;
+        }
+        .v-scaff__label{
+            &:before, &:after{
+                color: #f00;
+            }
+            &:after{
+                transform: translateY(0);
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.v-scaff__input-helper{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    padding: 0 2px;
+    background-color: #ffffff;
+    cursor: pointer;
+    svg{
+        width:15px;
+        height: 15px;
+        fill: $input-color;
+    }
+}
+
+.v-scaff__input-helper{
+    &:hover{
+        .tooltip {
+            visibility: visible;
+        }
+    }
+    .tooltip{
+        visibility: hidden;
+        width: 120px;
+        background-color: $input-color;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 500;
+        top: -5px;
+        left: 105%;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent $input-color transparent transparent;
+        }
+    }
+}
+

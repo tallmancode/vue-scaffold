@@ -1,0 +1,129 @@
+.v-scaff__sidebar{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 10;
+    margin: 0;
+    transition: background-color ease-in-out 0.3s, width ease-in-out 0.3s, margin ease-in-out 0.3s;
+    display: flex;
+    flex-flow: column;
+    z-index: 100;
+    &-header{
+        padding: 0.5rem 0.5rem 0 0.5rem;
+        overflow: hidden;
+        &-inner{
+            padding-bottom: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 2rem;
+            }
+            .text-header{
+                font-weight: normal;
+                font-size: 1.25rem;
+                margin: 0;
+                color: $primary;
+            }
+        }
+    }
+    &-item{
+        overflow: hidden;
+        padding: 0.5rem 0;
+        background-color: $v-scaff-item-bg;
+        transition: background-color ease-in-out 0.3s;
+        p{
+            margin: 0;
+        }
+        &:hover {
+            background-color: $v-scaff-item-hover-bg;
+            .v-scaff__sidebar-item-link{
+                color: $v-scaff-nav-link-hover-color;
+                fill: $v-scaff-nav-link-hover-color;
+            }
+        }
+
+
+    }
+    &-item-link{
+        text-decoration: none;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        color: $v-scaff-nav-link-color;
+        transition: color ease-in-out 0.3s;
+        fill: $v-scaff-nav-link-color;
+        &.active{
+            color: $v-scaff-nav-link-hover-color;
+            fill: $v-scaff-nav-link-hover-color;
+        }
+    }
+    &.expanded{
+        width: 250px;
+        .v-scaff__sidebar{
+            &-header{
+                &-inner{
+                    min-width: 130px;
+                }
+            }
+        }
+    }
+    &.float{
+        background-color: #FFFFFF;
+        box-shadow: 0 0 2rem 0 rgb(136 152 170 / 15%);
+        margin: 1rem 1.5rem;
+        border-radius: 1rem;
+        height: calc(100vh - (2rem));
+        .v-scaff__sidebar{
+            &-header{
+                &-inner{
+                    border-bottom: 2px solid rgba(143, 143, 143, 0.7);
+                }
+            }
+        }
+    }
+    &.docked{
+
+    }
+    &.collapsed{
+        width: 50px;
+        .v-scaff__sidebar-header-inner{
+            > div > img{
+                display: none;
+            }
+        }
+    }
+    .sidebar-content{
+        flex: 1;
+        position: relative;
+        &.loading{
+            &:before{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                top:0;
+                bottom: 0;
+                background-color: #fff;
+                animation-duration: 1s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-name: placeHolderShimmer;
+            }
+        }
+    }
+}
+
+.gradient {
+
+
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-color: #fff;
+    }
+    100%{
+        background-color: #f8f9fa;
+    }
+}

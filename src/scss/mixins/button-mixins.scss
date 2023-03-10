@@ -1,0 +1,15 @@
+@mixin button-variant(
+    $varient
+) {
+    background-color: map-get($varient, 'bg-color');
+    color: map-get($varient, 'color');
+    &:hover{
+        color: map-get($varient, 'hover-color');
+        background-color: map-get($varient, 'hover-bg-color');
+    }
+
+    &:disabled{
+        color: map-get($varient, 'hover-color');
+        background-color: map-get($varient, 'hover-bg-color');
+    }
+}
