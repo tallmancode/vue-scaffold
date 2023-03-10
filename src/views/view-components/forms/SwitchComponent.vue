@@ -3,33 +3,21 @@
         <div class="col-4">
             <v-scaff-form>
                 <div class="input-example">
-                    <v-scaff-input
-                        name="text_input"
-                        label="Text Input"
-                        v-model="value"
-                        v-model:error="error"
-                        :helperText="'some helper text'"
-                    ></v-scaff-input>
+
                     <div class="input-buttons">
                         <v-scaff-button
                             btnClass="danger"
-                            @click="addError('textInput')"
+                            @click="addError()"
                         >Trigger Error</v-scaff-button
                         >
                         <v-scaff-button
                             btnClass="info"
-                            @click="clearError('textInput')"
+                            @click="clearError()"
                         >Clear Error</v-scaff-button
                         >
                     </div>
                 </div>
             </v-scaff-form>
-        </div>
-        <div class="col-4">
-            <div class="input-output">
-                <label>Text Output Value</label>
-                <div v-text="value"></div>
-            </div>
         </div>
         <div class="col-4">
 
@@ -39,7 +27,7 @@
 
 <script>
 export default {
-    name: "TextInputComponent",
+    name: "SwitchComponent",
     data() {
         return {
             error: null,
@@ -47,11 +35,11 @@ export default {
         };
     },
     methods: {
-        addError() {
-            this.error = "This is a error message";
+        addError(inputName) {
+            this[inputName].error = "This is a error message";
         },
-        clearError() {
-            this.error = null;
+        clearError(inputName) {
+            this[inputName].error = null;
         },
     },
 }

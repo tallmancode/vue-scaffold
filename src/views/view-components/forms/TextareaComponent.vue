@@ -3,22 +3,21 @@
         <div class="col-4">
             <v-scaff-form>
                 <div class="input-example">
-                    <v-scaff-input
-                        name="text_input"
-                        label="Text Input"
+                    <v-scaff-textarea
+                        name="textarea_input"
+                        label="Textarea Input"
                         v-model="value"
                         v-model:error="error"
-                        :helperText="'some helper text'"
-                    ></v-scaff-input>
+                        :helperText="'some helper text'"></v-scaff-textarea>
                     <div class="input-buttons">
                         <v-scaff-button
                             btnClass="danger"
-                            @click="addError('textInput')"
+                            @click="addError()"
                         >Trigger Error</v-scaff-button
                         >
                         <v-scaff-button
                             btnClass="info"
-                            @click="clearError('textInput')"
+                            @click="clearError()"
                         >Clear Error</v-scaff-button
                         >
                     </div>
@@ -27,7 +26,7 @@
         </div>
         <div class="col-4">
             <div class="input-output">
-                <label>Text Output Value</label>
+                <label>Textarea Output Value</label>
                 <div v-text="value"></div>
             </div>
         </div>
@@ -39,7 +38,9 @@
 
 <script>
 export default {
-    name: "TextInputComponent",
+    name: "TextareaComponent",
+    components: {},
+
     data() {
         return {
             error: null,

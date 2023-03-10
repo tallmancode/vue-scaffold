@@ -1,15 +1,22 @@
 <template>
     <v-scaff-page>
         <text-input-component></text-input-component>
+        <select-component></select-component>
+        <auto-complete-component></auto-complete-component>
+        <textarea-component></textarea-component>
+        <switch-component></switch-component>
     </v-scaff-page>
 </template>
 
 <script>
 import TextInputComponent from "./view-components/forms/TextInputComponent.vue";
-
+import SelectComponent from "./view-components/forms/SelectComponent.vue";
+import AutoCompleteComponent from "./view-components/forms/AutoCompleteComponent.vue";
+import TextareaComponent from "./view-components/forms/TextareaComponent.vue";
+import SwitchComponent from "./view-components/forms/SwitchComponent.vue";
 export default {
     name: "FormsView",
-    components: {TextInputComponent},
+    components: {TextInputComponent, SelectComponent, AutoCompleteComponent, TextareaComponent, SwitchComponent}
 
 };
 </script>

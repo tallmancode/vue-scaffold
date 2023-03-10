@@ -33,6 +33,11 @@
             visibility: hidden;
         }
     }
+    textarea + .v-scaff__label{
+        &:after{
+            bottom: 8px;
+        }
+    }
     .v-scaff__input{
         box-sizing: border-box;
         width: 100%;
@@ -44,8 +49,10 @@
         font-size: $font-size-base;
         resize: none;
         outline: none;
-        height: calc(3em + 2px);
         transition: border-color 0.3s;
+        &:not(textarea){
+            height: calc(3em + 2px);
+        }
     }
     &:not(.error) .v-scaff__input:focus, .v-scaff__input:active {
         transition-duration: 0.2s;
