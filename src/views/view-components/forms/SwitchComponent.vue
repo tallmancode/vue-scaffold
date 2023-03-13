@@ -5,7 +5,7 @@
                 <div class="input-example">
                     <v-scaff-switch
                         name="switch_input"
-                        label="Text Input"
+                        label="Switch Input"
                         v-model="value"
                         v-model:error="error"
                         :helperText="'some helper text'"></v-scaff-switch>

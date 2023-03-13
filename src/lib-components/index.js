@@ -37,6 +37,9 @@ import VScaffSelect from "./forms/VScaffSelect.vue";
 import VScaffSwitch from "./forms/VScaffSwitch.vue";
 import VScaffTextarea from "./forms/VScaffTextarea.vue";
 
+//Transitions
+import VScaffHeightTransition from "./transitions/VScaffHeightTransition.vue";
+
 export {
     VScaff,
     VScaffMain,
@@ -66,5 +69,6 @@ export {
     VScaffAutoComplete,
     VScaffSelect,
     VScaffSwitch,
-    VScaffTextarea
+    VScaffTextarea,
+    VScaffHeightTransition
 };

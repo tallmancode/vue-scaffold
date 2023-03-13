@@ -2,8 +2,13 @@
     <div class="row card-row">
         <div class="col-4">
             <v-scaff-form>
+                <v-scaff-select name="select_input"
+                                label="Select Input"
+                                v-model="value"
+                                v-model:error="error"
+                                :options="options"
+                                :helperText="'some helper text'"></v-scaff-select>
                 <div class="input-example">
-
                     <div class="input-buttons">
                         <v-scaff-button
                             btnClass="danger"
@@ -32,14 +37,19 @@ export default {
         return {
             error: null,
             value: null,
+            options: [
+                {id:1, name:'something'},
+                {id:2, name:'something else'},
+                {id:3, name:'another thing'},
+            ]
         };
     },
     methods: {
-        addError(inputName) {
-            this[inputName].error = "This is a error message";
+        addError() {
+            this.error = "This is a error message";
         },
-        clearError(inputName) {
-            this[inputName].error = null;
+        clearError() {
+            this.error = null;
         },
     },
 }
