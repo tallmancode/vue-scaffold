@@ -13,6 +13,11 @@
                         icon="envelope-info"
                         :to="{ name: 'forms-view' }"
                     />
+                    <v-scaff-sidebar-r-link
+                        label="Cards"
+                        icon="envelope-info"
+                        :to="{ name: 'cards-view' }"
+                    />
                 </ul>
             </template>
         </v-scaff-sidebar>

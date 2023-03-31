@@ -1,0 +1,32 @@
+.v-scaff__card{
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    border-radius: 3px;
+    z-index: 1;
+    overflow: unset;
+    display: inline-block;
+    &-header{
+        background: linear-gradient(60deg,#ffa726,#fb8c00);
+        box-shadow: 0 12px 20px -10px rgba(255,152,0,.28), 0 4px 20px 0 rgba(0,0,0,.12), 0 7px 8px -5px rgba(255,152,0,.2);
+        margin: -20px 15px 0;
+        border-radius: 3px;
+        padding: 15px;
+        .title{
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: 300;
+            line-height: 1.5em;
+            font-size: 1.25rem;
+        }
+    }
+    &-content{
+        padding: 15px 20px;
+    }
+    &-footer{
+
+    }
+}

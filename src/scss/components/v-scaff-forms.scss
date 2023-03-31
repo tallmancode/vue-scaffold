@@ -33,6 +33,11 @@
             visibility: hidden;
         }
     }
+    textarea + .v-scaff__label{
+        &:after{
+            bottom: 8px;
+        }
+    }
     .v-scaff__input{
         box-sizing: border-box;
         width: 100%;
@@ -44,8 +49,10 @@
         font-size: $font-size-base;
         resize: none;
         outline: none;
-        height: calc(3em + 2px);
         transition: border-color 0.3s;
+        &:not(textarea){
+            height: calc(3em + 2px);
+        }
     }
     &:not(.error) .v-scaff__input:focus, .v-scaff__input:active {
         transition-duration: 0.2s;
@@ -68,6 +75,73 @@
                 visibility: visible;
             }
         }
+    }
+
+    //switch styling
+    &.switch{
+        min-height: 1rem * 1.5;
+        margin-bottom: 1rem;
+        padding-left: 1em + .5em;
+        display: flex;
+        align-items: center;
+
+        .v-scaff__input-helper{
+            position: relative;
+            right: unset;
+            top: unset;
+            margin-left: 1rem;
+        }
+    }
+    .v-scaff__switch{
+        float: left;
+        width: 30px;
+        height: 17px;
+        margin-top: 0;
+        vertical-align: top;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 1px solid #757575;
+        appearance: none;
+        color-adjust: exact;
+        margin-left: 1.5em * -1;
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(0, 0, 0, .25)'/></svg>");
+        background-position: left center;
+        border-radius: 15px;
+        transition: background-position .15s ease-in-out;
+        &:active {
+            filter: brightness(90%);
+        }
+
+        &:focus {
+            border-color: #757575;
+            outline: 0;
+            box-shadow: none;
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(0, 0, 0, .25)'/></svg>");
+        }
+
+        &:checked {
+            background-color: #0091da;
+            border-color: #0091da;
+            background-position: right;
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(255, 255, 255, 1)'/></svg>");
+        }
+
+        &:disabled {
+            pointer-events: none;
+            filter: none;
+            opacity: .5;
+        }
+
+        &[disabled],
+        &:disabled {
+            ~ .form-check-label {
+                opacity: .5;
+            }
+        }
+    }
+    .v-scaff__switch-label{
+        margin-left: 1rem;
     }
 }
 
@@ -113,6 +187,79 @@
             border-style: solid;
             border-color: transparent $input-color transparent transparent;
         }
+    }
+}
+
+//select
+.v-scaff__select{
+    box-sizing: border-box;
+    position: relative;
+    &-toggle{
+        cursor: pointer;
+        position: relative;
+        input{
+            box-sizing: border-box;
+            width: 100%;
+            margin: 1em 0 1em;
+            padding: 6px;
+            border: 1px solid #bababa;
+            border-radius: 3px;
+            background: #fff;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+            height: calc(3em + 2px);
+            transition: border-color 0.3s;
+            &[readonly]{
+                cursor: pointer;
+            }
+
+        }
+    }
+    &-dropdown{
+        width: 100%;
+        position: absolute;
+        background: #fff;
+        z-index: 99;
+        margin: 0;
+        padding: 0;
+        top: calc(100% - 10px);
+        box-sizing: border-box;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        list-style-type: none;
+        transition: height 0.3s ease-in-out;
+        &-list{
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            border: 1px solid #bababa;
+            border-radius: 3px;
+            overflow: visible;
+            position: relative;
+            z-index: 5;
+            li{
+                transition: background-color 0.3s ease-in-out;
+                padding: 6px;
+                color: #809fb8;
+                position: relative;
+                z-index: 6;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #dbdada;
+                }
+            }
+        }
+    }
+    &-clear{
+        outline: none;
+        border: none;
+        position: absolute;
+        background: transparent;
+        z-index: 100;
+        top: 50%;
+        transform: translateY(-50%);
+        right:4px;
     }
 }
 

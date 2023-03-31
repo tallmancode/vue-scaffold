@@ -1,22 +1,22 @@
 <template>
     <v-scaff-page>
-        <text-input-component></text-input-component>
-        <select-component></select-component>
-        <auto-complete-component></auto-complete-component>
-        <textarea-component></textarea-component>
-        <switch-component></switch-component>
+        <div class="row">
+           <div class="col-4">
+               <v-scaff-card :headerText="'Shomething'">
+                   <template v-slot:default>
+                       Something
+                   </template>
+               </v-scaff-card>
+           </div>
+        </div>
     </v-scaff-page>
 </template>
 
 <script>
-import TextInputComponent from "./view-components/forms/TextInputComponent.vue";
-import SelectComponent from "./view-components/forms/SelectComponent.vue";
-import AutoCompleteComponent from "./view-components/forms/AutoCompleteComponent.vue";
-import TextareaComponent from "./view-components/forms/TextareaComponent.vue";
-import SwitchComponent from "./view-components/forms/SwitchComponent.vue";
+import VScaffCard from "../lib-components/cards/VScaffCard.vue";
 export default {
-    name: "FormsView",
-    components: {TextInputComponent, SelectComponent, AutoCompleteComponent, TextareaComponent, SwitchComponent}
+    name: "CardsView",
+    components: {VScaffCard}
 
 };
 </script>

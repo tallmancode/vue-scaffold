@@ -32,6 +32,13 @@ import VScaffSlideSection from "./modals/slide/VScaffSlideSection.vue";
 
 import VScaffForm from "./forms/VScaffForm.vue";
 import VScaffInput from "./forms/VScaffInput.vue";
+import VScaffAutoComplete from "./forms/VScaffAutoComplete.vue";
+import VScaffSelect from "./forms/VScaffSelect.vue";
+import VScaffSwitch from "./forms/VScaffSwitch.vue";
+import VScaffTextarea from "./forms/VScaffTextarea.vue";
+
+//Transitions
+import VScaffHeightTransition from "./transitions/VScaffHeightTransition.vue";
 
 export {
     VScaff,
@@ -59,4 +66,9 @@ export {
     // VScaffConfirmModal,
     VScaffForm,
     VScaffInput,
+    VScaffAutoComplete,
+    VScaffSelect,
+    VScaffSwitch,
+    VScaffTextarea,
+    VScaffHeightTransition
 };
