@@ -1,6 +1,6 @@
 {
-  "name": "vue-scaffold-vite",
-  "version": "0.0.0",
+  "name": "vue-scaffold",
+  "version": "0.0.1-beta",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "core-js": "^3.30.0",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.57.1",
     "vue": "^3.2.45",

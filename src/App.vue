@@ -9,13 +9,18 @@
                         :to="{ name: 'dashboard' }"
                     />
                     <v-scaff-sidebar-r-link
+                        label="Buttons"
+                        icon="vertical-distribution-center"
+                        :to="{ name: 'buttons-view' }"
+                    />
+                    <v-scaff-sidebar-r-link
                         label="Forms"
                         icon="envelope-info"
                         :to="{ name: 'forms-view' }"
                     />
                     <v-scaff-sidebar-r-link
                         label="Cards"
-                        icon="envelope-info"
+                        icon="postcard"
                         :to="{ name: 'cards-view' }"
                     />
                 </ul>

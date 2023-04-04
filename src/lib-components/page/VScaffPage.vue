@@ -1,15 +1,12 @@
 <template>
     <div class="v-scaff__page" v-bind:class="{ dark: api.darkMode }">
-        <div class="scaffold-page__title" v-if="title">
+        <div v-if="title" class="scaffold-page__title">
             <slot name="title-inner">
                 <h3 v-if="title">{{ title }}</h3>
             </slot>
             <slot name="title-after"></slot>
         </div>
         <slot></slot>
-        <!--        <transition name="fade">-->
-        <!--            <v-scaff-page-loader v-if="loading || $globalLoading.value" :message="loadingMessage"></v-scaff-page-loader>-->
-        <!--        </transition>-->
     </div>
 </template>
 
@@ -17,13 +14,12 @@
 export default {
     name: "VScaffPage",
     components: {},
-    mounted() {
-        console.log(this.api);
-    },
     props: {
         options: {
             type: Array,
-            default: [],
+            default() {
+                return [];
+            },
         },
         fluid: {
             type: Boolean,

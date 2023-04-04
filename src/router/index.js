@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import DashboardView from "../views/DashboardView.vue";
+import ButtonsView from "../views/ButtonsView.vue";
 import FormsView from "../views/FormsView.vue";
 import CardsView from "../views/CardsView.vue";
 
@@ -10,6 +11,11 @@ const router = createRouter({
             path: "/",
             name: "dashboard",
             component: DashboardView,
+        },
+        {
+            path: "/buttons",
+            name: "buttons-view",
+            component: ButtonsView,
         },
         {
             path: "/forms",
