@@ -100,17 +100,17 @@ $btn-varients: (
                 hover-color: $white,
                 hover-bg-color: rgba($secondary, 0.6)
         ),
-        danger : (
-                color: $white,
-                bg-color: $danger,
-                hover-color: $white,
-                hover-bg-color: rgba($danger, 0.6)
-        ),
         info : (
                 color: $white,
                 bg-color: $info,
                 hover-color: $white,
                 hover-bg-color: rgba($info, 0.6)
+        ),
+        danger : (
+                color: $white,
+                bg-color: $danger,
+                hover-color: $white,
+                hover-bg-color: rgba($danger, 0.6)
         )
 )!default;
 
@@ -123,7 +123,8 @@ $btn-font-weight: normal !default;
 $btn-font-size: 1rem !default;
 $btn-padding-x: .375rem !default;
 $btn-padding-y: .75rem !default;
-$btn-height: 45px !default;
+$btn-height: 35px !default;
+$btn-width: 120px !default;
 
 //Headings
 $headings-margin-bottom:      $spacer * .5 !default;

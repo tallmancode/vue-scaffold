@@ -1,9 +1,31 @@
 <template>
     <v-scaff-page>
         <div class="row">
-           <div class="col-4">
+            <div class="col-4">
+                <h4>V Scaff Buttons</h4>
+                <v-scaff-button btnClass="primary">Primary Button</v-scaff-button>
+                <v-scaff-button btnClass="secondary">Secondary Button</v-scaff-button>
+                <v-scaff-button btnClass="info">Info Button</v-scaff-button>
+                <v-scaff-button btnClass="danger">Danger Button</v-scaff-button>
+            </div>
+            <div class="col-8">
+                <h4>V Scaff Buttons</h4>
+                <div class="row">
+                    <div class="col-6">
+                        <v-scaff-loading-button :is-loading="false" btnClass="primary">Primary Button</v-scaff-loading-button>
+                        <v-scaff-loading-button :is-loading="false" btnClass="secondary">Secondary Button</v-scaff-loading-button>
+                        <v-scaff-loading-button :is-loading="false" btnClass="info">Info Button</v-scaff-loading-button>
+                        <v-scaff-loading-button :is-loading="false" btnClass="danger">Danger Button</v-scaff-loading-button>
+                    </div>
+                    <div class="col-6">
+                        <v-scaff-loading-button :is-loading="true" btnClass="primary">Primary Button</v-scaff-loading-button>
+                        <v-scaff-loading-button :is-loading="true" btnClass="secondary">Secondary Button</v-scaff-loading-button>
+                        <v-scaff-loading-button :is-loading="true" btnClass="info">Info Button</v-scaff-loading-button>
+                        <v-scaff-loading-button :is-loading="true" btnClass="danger">Danger Button</v-scaff-loading-button>
+                    </div>
+                </div>
 
-           </div>
+            </div>
         </div>
     </v-scaff-page>
 </template>
@@ -11,52 +33,11 @@
 <script>
 export default {
     name: "ButtonsView",
-    components: {}
-
 };
 </script>
 
 <style lang="scss" scoped>
-::v-deep(.input-buttons) {
-    display: flex;
-    justify-content: space-between;
-}
-
-::v-deep(.input-output) {
-    position: relative;
-
-    label {
-        top: -8px;
-        position: absolute;
-        line-height: 1.25em;
-        display: inline-block;
-        margin: 0 calc(0.5em + 2px);
-        padding: 0 2px;
-        white-space: nowrap;
-        color: #7d7d7d;
-        background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-        background-size: 100% 5px;
-        background-repeat: no-repeat;
-        background-position: center;
-        left: 0;
-        font-size: 14px;
-        transition: color 0.3s;
-        z-index: 9;
-
-        + div {
-            box-sizing: border-box;
-            width: 100%;
-            margin: 1em 0 1em;
-            padding: 6px;
-            border: 1px solid #bababa;
-            border-radius: 3px;
-            background: #fff;
-            font-size: 1rem;
-            resize: none;
-            outline: none;
-            transition: border-color 0.3s;
-            min-height: 100px;
-        }
-    }
+button {
+    margin-bottom: 0.5rem;
 }
 </style>

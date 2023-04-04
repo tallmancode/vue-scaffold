@@ -12,7 +12,7 @@ export default {
     props: {
         btnClass: {
             type: String,
-            default: "btn primary",
+            default: "primary",
         },
     },
 };
