@@ -32,6 +32,19 @@ const envelopeInfo = {
     path: '<path d="M21,13.5a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V8.91l5.88,5.88a3,3,0,0,0,4.24,0l3.59-3.58a1,1,0,0,0-1.42-1.42l-3.58,3.59a1,1,0,0,1-1.42,0L5.41,7.5H17a1,1,0,0,0,0-2H5a3,3,0,0,0-3,3v10a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3v-4A1,1,0,0,0,21,13.5Zm0-9a1.05,1.05,0,0,0,.71-.29l.12-.16a.56.56,0,0,0,.09-.17A.64.64,0,0,0,22,3.7a1.36,1.36,0,0,0,0-.2,1.05,1.05,0,0,0-.29-.71,1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.42A1.05,1.05,0,0,0,21,4.5Zm0,1a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0v-4A1,1,0,0,0,21,5.5Z"/>',
 };
 
+const postcard = {
+    name: 'postcard',
+    style: 'line',
+    path: '<path d="M17,11h1a1,1,0,0,0,1-1V9a1,1,0,0,0-1-1H17a1,1,0,0,0-1,1v1A1,1,0,0,0,17,11ZM6,12h5a1,1,0,0,0,0-2H6a1,1,0,0,0,0,2ZM22,4H2A1,1,0,0,0,1,5V19a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V5A1,1,0,0,0,22,4ZM21,18H3V6H21ZM6,16h5a1,1,0,0,0,0-2H6a1,1,0,0,0,0,2Z"/>'
+}
+
+
+const verticalDistributionCenter = {
+    name: 'vertical-distribution-center',
+    style: 'line',
+    path: '<path d="M21,15H20V13a1,1,0,0,0-1-1H5a1,1,0,0,0-1,1v2H3a1,1,0,0,0,0,2H4v2a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V17h1a1,1,0,0,0,0-2Zm-3,3H6V14H18ZM3,8H5V9a1,1,0,0,0,1,1H18a1,1,0,0,0,1-1V8h2a1,1,0,0,0,0-2H19V5a1,1,0,0,0-1-1H6A1,1,0,0,0,5,5V6H3A1,1,0,0,0,3,8ZM7,6H17V8H7Z"/>'
+};
+
 export const infoCircle = {
     name: "info-circle",
     style: "line",
@@ -54,6 +67,8 @@ export const Icons = [
     bellSchool,
     listUiAlt,
     envelopeInfo,
+    verticalDistributionCenter,
+    postcard,
     infoCircle,
-    timesCircle
+    timesCircle,
 ];
