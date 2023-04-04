@@ -17,6 +17,8 @@ import VScaffPageActions from "./page/VScaffPageActions.vue";
 import VScaffSidebarLink from "./sidebar/VScaffSidebarLink.vue";
 import VScaffSidebarRLink from "./sidebar/VScaffSidebarRLink.vue";
 
+import VScaffCard from "./cards/VScaffCard.vue";
+
 import VScaffAvatar from "./avatars/VScaffAvatar.vue";
 
 import VScaffIcon from "./icons/VScaffIcon.vue";
@@ -55,15 +57,12 @@ export {
     VScaffPageActions,
     VScaffSidebarLink,
     VScaffSidebarRLink,
+    VScaffCard,
     VScaffAvatar,
     VScaffIcon,
     VScaffIconButton,
     VScaffLoadingButton,
     VScaffButton,
-    // VScaffPopup,
-    // VScaffSlide,
-    VScaffSlideSection,
-    // VScaffConfirmModal,
     VScaffForm,
     VScaffInput,
     VScaffAutoComplete,
