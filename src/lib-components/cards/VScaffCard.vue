@@ -1,17 +1,18 @@
 <template>
     <div class="v-scaff__card">
-        <div class="v-scaff__card-header">
+        <div :class="['v-scaff__card-header', { 'image-header': headerImg }]">
             <slot name="header">
                 <h4 v-if="headerText" class="title">{{ headerText }}</h4>
+                <div class="header-image" v-if="headerImg">
+                    <img :src="headerImg" alt="" />
+                </div>
             </slot>
         </div>
         <div class="v-scaff__card-content">
-            <slot>
-            </slot>
+            <slot> </slot>
         </div>
         <div class="v-scaff__card-footer">
-            <slot name="footer">
-            </slot>
+            <slot name="footer"> </slot>
         </div>
     </div>
 </template>
@@ -24,10 +25,12 @@ export default {
             type: [String, Boolean],
             default: false,
         },
+        headerImg: {
+            type: [String, Boolean],
+            default: false,
+        },
     },
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
