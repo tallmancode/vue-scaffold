@@ -1,6 +1,6 @@
 <template>
     <button
-        :class="[{ loading: isLoading }, btnClass, 'v-scaff__loading-button']"
+        :class="[{ loading: isLoading }, btnClass, 'v-scaff__button v-scaff__loading-button']"
         :disabled="isLoading"
     >
         <span class="loading-text" v-html="loadingText"></span>
@@ -24,7 +24,7 @@ export default {
         },
         btnClass: {
             type: String,
-            default: "",
+            default: "primary",
         },
     },
 };

@@ -17,6 +17,8 @@ import VScaffPageActions from "./page/VScaffPageActions.vue";
 import VScaffSidebarLink from "./sidebar/VScaffSidebarLink.vue";
 import VScaffSidebarRLink from "./sidebar/VScaffSidebarRLink.vue";
 
+import VScaffCard from "./cards/VScaffCard.vue";
+
 import VScaffAvatar from "./avatars/VScaffAvatar.vue";
 
 import VScaffIcon from "./icons/VScaffIcon.vue";
@@ -32,6 +34,13 @@ import VScaffSlideSection from "./modals/slide/VScaffSlideSection.vue";
 
 import VScaffForm from "./forms/VScaffForm.vue";
 import VScaffInput from "./forms/VScaffInput.vue";
+import VScaffAutoComplete from "./forms/VScaffAutoComplete.vue";
+import VScaffSelect from "./forms/VScaffSelect.vue";
+import VScaffSwitch from "./forms/VScaffSwitch.vue";
+import VScaffTextarea from "./forms/VScaffTextarea.vue";
+
+//Transitions
+import VScaffHeightTransition from "./transitions/VScaffHeightTransition.vue";
 
 export {
     VScaff,
@@ -48,15 +57,17 @@ export {
     VScaffPageActions,
     VScaffSidebarLink,
     VScaffSidebarRLink,
+    VScaffCard,
     VScaffAvatar,
     VScaffIcon,
     VScaffIconButton,
     VScaffLoadingButton,
     VScaffButton,
-    // VScaffPopup,
-    // VScaffSlide,
-    VScaffSlideSection,
-    // VScaffConfirmModal,
     VScaffForm,
     VScaffInput,
+    VScaffAutoComplete,
+    VScaffSelect,
+    VScaffSwitch,
+    VScaffTextarea,
+    VScaffHeightTransition
 };

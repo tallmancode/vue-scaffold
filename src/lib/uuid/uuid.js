@@ -25,7 +25,7 @@ const uuid = {
         uuid.domElem[uid] = {
             id: name + "_" + alphaNum,
         };
-        console.log(uuid.domElem);
+
         return name + "_" + alphaNum;
     },
 };

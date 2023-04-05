@@ -87,6 +87,7 @@
     font-family: $button-font;
     font-weight: $btn-font-weight;
     font-size: $btn-font-size;
+    height: $btn-height;
     text-align: center;
     text-decoration: none;
     color: $font-color;
@@ -99,10 +100,59 @@
     border: 1px solid transparent;
     border-radius: 3px;
     transition: $btn-transition;
+    min-width: $btn-width;
     &:disabled{
         opacity: 0.6;
         cursor: not-allowed;
         background-color: rgba($btn-default-bg-color, 0.7);
+    }
+    &.v-scaff__loading-button{
+        margin-right: 10px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        span{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: height 0.3s ease-in-out;
+            &.loading-text{
+                height: 0;
+                overflow: hidden;
+                //padding: 0 30px;
+            }
+        }
+        &.loading{
+            background-color: $secondary;
+            span{
+                &.loading-text{
+                    height: $btn-height;
+                    &:before{
+                        content: " ";
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        border: 2px solid;
+                        border-color: #fff transparent #fff transparent;
+                        animation: loading-ring 1.2s linear infinite;
+                        left: 4px;
+                        filter: none;
+                        background: none;
+                        top: 8px;
+                        margin-right: $float-spacing-y;
+                        position: absolute;
+
+                    }
+                }
+                &.content{
+                    height: 0;
+                    overflow: hidden;
+                }
+            }
+        }
     }
 }
 

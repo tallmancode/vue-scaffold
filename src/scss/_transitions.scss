@@ -1,0 +1,11 @@
+.expand-enter-active,
+.expand-leave-active {
+    transition-timing-function: cubic-bezier(0.3, 0.7, 1.0, 0.1);
+    transition-duration: 0.2s;
+    overflow: hidden;
+}
+
+.expand-enter,
+.expand-leave-to {
+    height: 0;
+}
