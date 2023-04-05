@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import IMG_URL from "../../assets/card-header.png";
 export default {
     name: "VScaffCard",
     props: {
@@ -30,11 +29,6 @@ export default {
             type: [String, Boolean],
             default: false,
         },
-    },
-    data() {
-        return {
-            imgSrc: IMG_URL,
-        };
     },
 };
 </script>
