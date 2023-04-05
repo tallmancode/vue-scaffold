@@ -1,23 +1,29 @@
 <template>
     <v-scaff-page>
         <div class="row">
-           <div class="col-4">
-               <v-scaff-card :headerText="'Shomething'">
-                   <template v-slot:default>
-                       Something
-                   </template>
-               </v-scaff-card>
-           </div>
+            <div class="col-4">
+                <v-scaff-card :headerText="'Shomething'">
+                    <template v-slot:default> Something </template>
+                </v-scaff-card>
+            </div>
+            <div class="col-4">
+                <v-scaff-card :headerImg="cardImage">
+                    <template v-slot:default> Something </template>
+                </v-scaff-card>
+            </div>
         </div>
     </v-scaff-page>
 </template>
 
 <script>
-import VScaffCard from "../lib-components/cards/VScaffCard.vue";
+import CARD_IMAGE from "../assets/card-header.png";
 export default {
     name: "CardsView",
-    components: {VScaffCard}
-
+    data() {
+        return {
+            cardImage: CARD_IMAGE,
+        };
+    },
 };
 </script>
 

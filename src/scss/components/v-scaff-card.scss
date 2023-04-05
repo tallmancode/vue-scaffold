@@ -22,6 +22,25 @@
             line-height: 1.5em;
             font-size: 1.25rem;
         }
+        &.image-header{
+            padding: 0px;
+            box-shadow: none;
+            .header-image{
+                height: 150px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 3px;
+                img{
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 150px;
+                    width: auto;
+                    max-width: unset;
+                    position: absolute;
+                }
+            }
+        }
     }
     &-content{
         padding: 15px 20px;
