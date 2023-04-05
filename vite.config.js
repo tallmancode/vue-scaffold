@@ -1,7 +1,7 @@
-import { fileURLToPath, URL } from "node:url";
+import {fileURLToPath, URL} from "node:url";
 // eslint-disable-next-line no-undef
 const path = require("path");
-import { defineConfig } from "vite";
+import {defineConfig} from "vite";
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
@@ -14,7 +14,7 @@ export default defineConfig({
             fileName: (format) => `vue-scaffold.${format}.js`,
         },
         rollupOptions: {
-            external: ["vue"],
+            external: ["vue", "vue-router"],
             output: {
                 exports: "named",
                 globals: {
@@ -27,5 +27,6 @@ export default defineConfig({
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
-    },
+        dedupe: ["vue", "vue-router"],
+    }
 });
