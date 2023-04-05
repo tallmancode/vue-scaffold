@@ -12,9 +12,7 @@
   "dependencies": {
     "core-js": "^3.30.0",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.57.1",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "sass": "^1.57.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
@@ -26,6 +24,8 @@
     "jsdom": "^20.0.3",
     "prettier": "^2.7.1",
     "vite": "^4.0.0",
-    "vitest": "^0.25.6"
+    "vitest": "^0.25.6",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
   }
 }
