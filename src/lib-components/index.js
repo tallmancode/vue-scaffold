@@ -42,6 +42,9 @@ import VScaffTextarea from "./forms/VScaffTextarea.vue";
 //Transitions
 import VScaffHeightTransition from "./transitions/VScaffHeightTransition.vue";
 
+//Modals
+import VScaffDynamicModalContainer from "./dynamic-modal/VScaffDynamicModalContainer.vue";
+
 export {
     VScaff,
     VScaffMain,
@@ -69,5 +72,6 @@ export {
     VScaffSelect,
     VScaffSwitch,
     VScaffTextarea,
-    VScaffHeightTransition
+    VScaffHeightTransition,
+    VScaffDynamicModalContainer
 };

@@ -18,6 +18,7 @@ export function defineApi(options) {
         uuid: uuid,
         sidebar: sidebarOptions,
         inputs: inputOptions,
+        modals: [],
     };
 }
 
