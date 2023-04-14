@@ -19,6 +19,7 @@ export default defineConfig({
                 exports: "named",
                 globals: {
                     vue: "Vue",
+                    "vue-router": "VueRouter",
                 },
             },
         },
