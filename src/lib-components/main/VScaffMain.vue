@@ -11,12 +11,12 @@
         <div class="v-scaff__main-content">
             <router-view v-slot="{ Component }">
                 <transition mode="out-in" name="fade">
-                    <component :is="Component" />
+                    <component :is="Component"/>
                 </transition>
             </router-view>
         </div>
         <v-scaff-main-footer></v-scaff-main-footer>
-        <!--        <ModalsContainer></ModalsContainer>-->
+        <v-scaff-dynamic-modal-container/>
     </main>
 </template>
 

@@ -23,6 +23,11 @@
                         icon="postcard"
                         :to="{ name: 'cards-view' }"
                     />
+                    <v-scaff-sidebar-r-link
+                        label="Modals"
+                        icon="postcard"
+                        :to="{ name: 'modals-view' }"
+                    />
                 </ul>
             </template>
         </v-scaff-sidebar>
