@@ -27,7 +27,7 @@ import VScaffIconButton from "./buttons/VScaffIconButton.vue";
 import VScaffLoadingButton from "./buttons/VScaffLoadingButton.vue";
 import VScaffButton from "./buttons/VScaffButton.vue";
 
-// import VScaffPopup from "./modals/VScaffPopUp.vue";
+
 // import VScaffSlide from "./modals/slide/VScaffSlide.vue";
 import VScaffSlideSection from "./modals/slide/VScaffSlideSection.vue";
 // import VScaffConfirmModal from "./modals/VScaffConfirmModal.vue";
@@ -44,6 +44,8 @@ import VScaffHeightTransition from "./transitions/VScaffHeightTransition.vue";
 
 //Modals
 import VScaffDynamicModalContainer from "./dynamic-modal/VScaffDynamicModalContainer.vue";
+import VScaffDynamicModal from "./dynamic-modal/VScaffDynamicModal.vue";
+import VScaffPopup from "./modals/VScaffPopUp.vue";
 
 export {
     VScaff,
@@ -73,5 +75,7 @@ export {
     VScaffSwitch,
     VScaffTextarea,
     VScaffHeightTransition,
-    VScaffDynamicModalContainer
+    VScaffDynamicModalContainer,
+    VScaffDynamicModal,
+    VScaffPopup
 };

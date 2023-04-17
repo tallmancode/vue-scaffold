@@ -1,5 +1,5 @@
 <template>
-    <v-scaff-dynamic-modal
+    <vue-final-modal
         v-slot="{ close }"
         classes="v-scaff-modal__container v-scaff__popup"
         content-class="v-scaff-modal__content"
@@ -22,13 +22,15 @@
         <div class="v-scaff-modal__footer">
             <slot name="footer"></slot>
         </div>
-    </v-scaff-dynamic-modal>
+    </vue-final-modal>
 </template>
 
 <script>
+import { VueFinalModal } from "vue-final-modal";
 
 export default {
     name: "v-scaff-popup",
     inheritAttrs: false,
+    components: { VueFinalModal },
 };
 </script>
