@@ -49,7 +49,8 @@ export function defineApi(options) {
         sidebar: sidebarOptions,
         inputs: inputOptions,
         dynamicModals: dynamicModals,
-        triggerModal: triggerModal
+        triggerModal: triggerModal,
+        meta: mergedOptions.meta
     };
 }
 

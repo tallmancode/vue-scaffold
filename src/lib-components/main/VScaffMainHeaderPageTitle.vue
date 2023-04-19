@@ -18,6 +18,8 @@ export default {
         watch(
             () => route.name,
             () => {
+
+
                 if (route.meta && route.meta.showTitle) {
                     if (route.meta.title) {
                         name.value = route.meta.title;
