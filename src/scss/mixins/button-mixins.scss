@@ -1,15 +1,15 @@
-@mixin button-variant(
-    $varient
+@mixin button-variants(
+    $variants
 ) {
-    background-color: map-get($varient, 'bg-color');
-    color: map-get($varient, 'color');
+    background-color: map-get($variants, 'bg-color');
+    color: map-get($variants, 'color');
     &:hover{
-        color: map-get($varient, 'hover-color');
-        background-color: map-get($varient, 'hover-bg-color');
+        color: map-get($variants, 'hover-color');
+        background-color: map-get($variants, 'hover-bg-color');
     }
 
     &:disabled{
-        color: map-get($varient, 'hover-color');
-        background-color: map-get($varient, 'hover-bg-color');
+        color: map-get($variants, 'hover-color');
+        background-color: map-get($variants, 'hover-bg-color');
     }
 }

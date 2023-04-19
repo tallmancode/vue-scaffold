@@ -1,13 +1,13 @@
 // Single container class with breakpoint max-widths
 .container,
     // 100% wide container at all breakpoints
-.container-fluid {
+.container-full {
     @include make-container();
 }
 
 @each $breakpoint, $container-max-width in $container-max-widths {
     .container-#{$breakpoint} {
-        @extend .container-fluid;
+        @extend .container-full;
     }
 
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
@@ -42,3 +42,7 @@
 }
 
 @include make-grid-columns();
+
+.h-full{
+    height: 100%;
+}

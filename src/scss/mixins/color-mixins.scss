@@ -1,0 +1,9 @@
+@mixin color-variants(
+    $variants
+){
+    @each $key, $value in $variants{
+        .#{$key}{
+            color: $value;
+        }
+    }
+}

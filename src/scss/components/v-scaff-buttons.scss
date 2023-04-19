@@ -156,9 +156,9 @@
     }
 }
 
-@each $color, $value in $btn-varients {
+@each $color, $value in $btn-variants {
     .v-scaff__button.#{$color} {
-        @include button-variant($value);
+        @include button-variants($value);
     }
 }
 

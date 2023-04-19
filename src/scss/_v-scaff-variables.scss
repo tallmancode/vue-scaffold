@@ -1,17 +1,22 @@
-$primary: #0f9ee8;
-$secondary: #6c757d;
-$success: #198754;
-$info: #0dcaf0;
-$warning: #ffc107;
-$danger: #dc3545;
-$light: #f8f9fa;
-$dark: #212529;
-$grey-light: #8f8f8f;
-$white: #FFFFFF;
-$black: #000;
-$input-color:  #7d7d7d;
+$primary: #0f9ee8 !default;
+$secondary: #6c757d !default;
+$success: #198754 !default;
+$info: #0dcaf0 !default;
+$warning: #ffc107 !default;
+$danger: #dc3545 !default;
+$light: #f8f9fa !default;
+$dark: #212529 !default;
+$grey-light: #8f8f8f !default;
+$white: #FFFFFF !default;
+$black: #000 !default;
+$input-color:  #7d7d7d !default;
 
 $variable-prefix:             scaffold-;
+
+$color-variants: (
+        'primary' : $primary,
+        'secondary' : $secondary
+) !default;
 
 //Transitions
 $text-color-transition: color 0.3s ease-in-out;
@@ -87,7 +92,7 @@ $container-max-widths: (
         xxl: 1320px
 ) !default;
 
-$btn-varients: (
+$btn-variants: (
         primary : (
                 color: $white,
                 bg-color: $primary,

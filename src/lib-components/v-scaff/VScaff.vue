@@ -1,7 +1,6 @@
 <template>
     <div class="v-scaff">
         <slot></slot>
-
     </div>
 </template>
 

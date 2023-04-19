@@ -5,3 +5,5 @@ body{
 html{
     font-size: $font-size-root;
 }
+
+@include color-variants($color-variants)
