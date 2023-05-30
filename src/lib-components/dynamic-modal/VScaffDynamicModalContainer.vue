@@ -4,6 +4,7 @@
             :is="modal.component"
             :key="modal.id"
             v-on="modal.on"
+            v-bind="modal.bind"
             v-model="modal.value"
             v-for="(modal, index) in api.dynamicModals"
             @_closed="slice(index)"

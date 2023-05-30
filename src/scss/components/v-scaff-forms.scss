@@ -1,6 +1,23 @@
 .v-scaff__form{
 }
 
+.v-scaff__form-section{
+    &-title{
+        h3{
+            line-height: 1.25em;
+            color: $input-color;
+            font-size: 14px;
+            z-index: 9;
+            font-weight: normal;
+        }
+    }
+    &-content{
+        padding-bottom: 0.75rem;
+    }
+    border-bottom: 1px solid $input-color;
+    margin-bottom: 0.75rem;
+}
+
 .v-scaff__form-group{
     position: relative;
     .v-scaff__label{
@@ -167,16 +184,17 @@
     }
     .tooltip{
         visibility: hidden;
-        width: 120px;
+        width: 200px;
+        max-width: 200px;
         background-color: $input-color;
         color: #fff;
         text-align: center;
-        padding: 5px 0;
         border-radius: 6px;
         position: absolute;
         z-index: 500;
         top: -5px;
         left: 105%;
+        padding: 0.25rem;
         &:after{
             content: "";
             position: absolute;
@@ -262,4 +280,6 @@
         right:4px;
     }
 }
+
+
 

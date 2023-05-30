@@ -12,7 +12,9 @@
                 <v-scaff-icon name="times-circle" :width="25" :height="25"/>
             </a>
         </div>
-        <div class="v-scaff-modal__inner-content">content stuff</div>
+        <div class="v-scaff-modal__inner-content">
+            <a @click="$emit('success')">Trigger emit</a>
+        </div>
         <div class="v-scaff-modal__footer">footer</div>
     </v-scaff-dynamic-modal>
 </template>
@@ -20,7 +22,6 @@
 <script>
 export default {
     name: "PopupModal",
-    components: {},
     computed: {
         cssProps(){
             return {

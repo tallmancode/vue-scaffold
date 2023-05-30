@@ -18,11 +18,7 @@ export default {
             this.$vScaff.triggerModal({
                 component: PopupModal,
                 bind: {slideWidth: '50%', name: 'FoodMenuSlide'},
-            }).then( () => {
-                this.$vScaff.triggerModal({
-                    component: PopupModal2,
-                    bind: {slideWidth: '50%', name: 'FoodMenuSlide2'},
-                })
+                on: {'success' : () => {this.$vScaff.toggleModal('FoodMenuSlide')}},
             })
         }
     }

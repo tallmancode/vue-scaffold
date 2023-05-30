@@ -7,6 +7,7 @@
             <slot name="title-after"></slot>
         </div>
         <slot></slot>
+        <v-scaff-page-loader :message="loadingMessage" v-if="loading"/>
     </div>
 </template>
 
@@ -39,9 +40,7 @@ export default {
         },
     },
     computed: {
-        computedOptions() {
-            // return  {...this.$vScaff.options, ...this.options};
-        },
+
     },
 };
 </script>

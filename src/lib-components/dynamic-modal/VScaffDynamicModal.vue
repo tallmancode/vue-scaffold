@@ -1,7 +1,7 @@
 <template>
     <div v-if="visible" v-show="visible" ref="root" class="v-scaff__modal">
         <transition
-            name="vsm"
+            v-bind="computedOverlayTransition"
             @before-enter="beforeOverlayEnter"
             @after-enter="afterOverlayEnter"
             @before-leave="beforeOverlayLeave"
@@ -9,7 +9,7 @@
         >
             <div v-if="visibility.overlay" class="v-scaff__modal-overlay"></div>
         </transition>
-        <transition @after-leave="afterModalLeave">
+        <transition @after-leave="afterModalLeave" v-bind="computedTransition">
             <div
                 v-show="visibility.modal"
                 ref="vfmContainer"
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { ref, reactive, computed, onMounted, watch } from "vue";
+import { ref, reactive, computed, onMounted, watch, nextTick } from "vue";
 
 export default {
     name: "VScaffDynamicModal",
@@ -45,23 +45,30 @@ export default {
         });
 
         onMounted(() => {
+            props.api.modals.push(getModalInfo());
             mounted();
         });
 
         const mounted = () => {
             if (props.modelValue) {
-                emit('_before-open', createModalEvent({ type: '_before-open' }))
+                emit(
+                    "_before-open",
+                    createModalEvent({ type: "_before-open" })
+                );
             }
             visible.value = true;
-            startTransitionEnter();
+
+            nextTick(() => {
+                startTransitionEnter();
+            });
         };
 
         const createModalEvent = (eventProps = {}) => {
             return {
                 ref: getModalInfo(),
-                ...eventProps
-            }
-        }
+                ...eventProps,
+            };
+        };
 
         const getModalInfo = () => {
             return {
@@ -69,18 +76,24 @@ export default {
                 props,
                 emit,
                 visibility,
-                params
-            }
-        }
+                params,
+                toggle,
+            };
+        };
 
         const startTransitionEnter = () => {
             visibility.overlay = true;
             visibility.modal = true;
             emit("_opened");
         };
+
         const close = () => {
             visibility.overlay = false;
             visibility.modal = false;
+        };
+
+        const toggle = () => {
+            emit("update:modelValue", false);
         };
 
         const computedOverlayTransition = computed(() => {
@@ -89,6 +102,12 @@ export default {
             }
 
             return { ...props.overlayTransition };
+        });
+
+        const computedTransition = computed(() => {
+            if (typeof props.transition === "string")
+                return { name: props.transition };
+            return { ...props.transition };
         });
 
         const beforeOverlayEnter = () => {};
@@ -122,71 +141,22 @@ export default {
             afterOverlayLeave,
             afterModalLeave,
             computedOverlayTransition,
+            computedTransition,
             close,
             uid,
         };
     },
     props: {
+        name: { type: String, default: null },
         overlayTransition: {
             type: [String, Object],
-            default: "vsm",
+            default: "fade",
         },
+        transition: { type: [String, Object], default: "fade" },
         modelValue: { type: Boolean, default: false },
     },
     emits: ["update:modelValue", "_opened", "_closed", "_before-open"],
 };
 </script>
 
-<style lang="scss" scoped>
-.v-scaff {
-    &__modal {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-
-        .v-scaff__modal {
-            &-overlay {
-                background-color: rgba(0, 0, 0, 0.5);
-                height: 100%;
-                width: 100%;
-            }
-            &-wrapper {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            &-content {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                margin: 0 1rem;
-                padding: 1rem;
-                border: 1px solid #e2e8f0;
-                border-radius: 0.25rem;
-                background: #fff;
-                max-width: 600px;
-                width: var(--max-width);
-            }
-        }
-    }
-}
-
-//transitions
-.vsm-enter-active,
-.vsm-leave-active {
-    opacity: 1;
-}
-
-.vsm-enter-from,
-.vsm-leave-to {
-    opacity: 0;
-}
-</style>
+<style lang="scss" scoped></style>

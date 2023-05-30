@@ -19,3 +19,8 @@ ul{
 li{
 
 }
+
+.router-link-active{
+    color: rgba($primary, 0.5);
+    fill: rgba($primary, 0.5);
+}

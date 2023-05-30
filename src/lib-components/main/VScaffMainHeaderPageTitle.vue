@@ -18,11 +18,9 @@ export default {
         watch(
             () => route.name,
             () => {
-
-
                 if (route.meta && route.meta.showTitle) {
-                    if (route.meta.title) {
-                        name.value = route.meta.title;
+                    if (route.meta.pageTitle) {
+                        name.value = route.meta.pageTitle;
                     } else {
                         name.value = route.name;
                     }

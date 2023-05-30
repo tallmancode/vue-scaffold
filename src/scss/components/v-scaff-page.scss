@@ -34,7 +34,7 @@
                 border-radius: 50%;
                 border-width: 2px;
                 border-style: solid;
-                border-color: #b00000 transparent #b00000 transparent;
+                border-color: #{$page-loading-color} transparent #{$page-loading-color} transparent;
                 animation: loading-ring 1.2s linear infinite;
                 left: 5px;
                 filter: none;

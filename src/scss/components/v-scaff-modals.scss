@@ -2,7 +2,64 @@ $popup-modal-min: 500px;
 $popup-modal-max: 600px;
 $popup-modal-background-color: $white;
 $popup-modal-border-color: $grey-light;
+.v-scaff__modal{
+    &-container{
+        background-color: #f00
+    }
+}
+.v-scaff {
+    &__modal {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
 
+        .v-scaff__modal {
+            &-overlay {
+                background-color: rgba(0, 0, 0, 0.5);
+                height: 100%;
+                width: 100%;
+            }
+            &-wrapper {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &-content {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin: 0 1rem;
+                padding: 1rem;
+                border: 1px solid #e2e8f0;
+                border-radius: 0.25rem;
+                background: #fff;
+                max-width: 600px;
+                width: var(--max-width);
+            }
+        }
+    }
+}
+
+//transitions
+.vsm-enter-active,
+.vsm-leave-active {
+    opacity: 1;
+}
+
+.vsm-enter-from,
+.vsm-leave-to {
+    opacity: 0;
+}
+
+////
 .v-scaff-modal {
     &__container {
         display: flex;

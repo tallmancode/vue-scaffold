@@ -33,6 +33,7 @@ import VScaffSlideSection from "./modals/slide/VScaffSlideSection.vue";
 // import VScaffConfirmModal from "./modals/VScaffConfirmModal.vue";
 
 import VScaffForm from "./forms/VScaffForm.vue";
+import VScaffFormSection from "./forms/VScaffFormSection.vue";
 import VScaffInput from "./forms/VScaffInput.vue";
 import VScaffAutoComplete from "./forms/VScaffAutoComplete.vue";
 import VScaffSelect from "./forms/VScaffSelect.vue";
@@ -69,6 +70,7 @@ export {
     VScaffLoadingButton,
     VScaffButton,
     VScaffForm,
+    VScaffFormSection,
     VScaffInput,
     VScaffAutoComplete,
     VScaffSelect,

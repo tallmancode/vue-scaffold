@@ -18,6 +18,12 @@ export function defineApi(options) {
 
     const dynamicModals = shallowReactive([]);
 
+    const modals = shallowReactive([]);
+
+    const getModal = (...names) => {
+        return modals.filter(modal => names.includes(modal.props.name))
+    }
+
     const triggerModal = (modal, ...args) => {
         return Promise.allSettled([
             new Promise((resolve, reject) => {
@@ -40,8 +46,11 @@ export function defineApi(options) {
 
             })
         ])
+    }
 
-
+    const toggleModal = (name) => {
+        const modals = getModal(name);
+        Promise.allSettled(modals.map(modal => modal.toggle()));
     }
 
     return {
@@ -49,7 +58,10 @@ export function defineApi(options) {
         sidebar: sidebarOptions,
         inputs: inputOptions,
         dynamicModals: dynamicModals,
+        openedModals: [],
+        modals: modals,
         triggerModal: triggerModal,
+        toggleModal: toggleModal,
         meta: mergedOptions.meta
     };
 }
